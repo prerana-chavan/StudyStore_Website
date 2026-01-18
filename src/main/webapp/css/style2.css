@@ -1,0 +1,1267 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: #374151;
+}
+
+/* =========================
+   HEADER / NAVBAR (Bookstore Theme)
+========================= */
+
+.header {
+    background-color:#ff8fb3;
+    padding: 18px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+	
+}
+
+/* Logo */
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: white; /* teal */
+    letter-spacing: 0.5px;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.nav a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* underline animation */
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background-color: #0f766e;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover {
+    color: #0f766e;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* Cart highlight */
+.nav a.cart-link {
+    font-weight: 600;
+}
+
+/* Login button */
+.nav a.login-btn {
+    background-color: #0f766e;
+    color: #ffffff;
+    padding: 9px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.nav a.login-btn:hover {
+    background-color: #115e59;
+}
+
+/* Logout button */
+.nav a.logout-btn {
+    background-color: rgb(255, 0, 0);
+    color: #ffffff;
+    padding: 9px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.nav a.logout-btn:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+
+/* =========================
+   HERO SECTION (Generated Image)
+========================= */
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 90vh;
+    background: url("../images/hero1.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* soft overlay for text clarity */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+	margin-left: 500px;
+    max-width: 700px;
+    padding: 40px;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.hero-content h2 span {
+    color: #ff4d88;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* BUTTON */
+.primary-btn {
+    background: linear-gradient(135deg, #ff4d88, #ff8fb3);
+    color: #fff;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: linear-gradient(135deg, #ff3377, #ff6fa5);
+    transform: translateY(-2px);
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 40px;
+    background: #f9fafc;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.feature-card p {
+    color: #555;
+    font-size: 14px;
+}
+
+
+
+/* =========================
+   PRODUCTS – MODERN STATIONERY UI
+========================= */
+
+/* Page title */
+.page-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    margin: 45px 0 40px;
+    color: #0f766e;
+}
+
+/* Product grid */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 34px;
+    padding: 0 70px 100px;
+}
+
+/* Product card */
+.product-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+	text-align: center;
+}
+
+/* Hover effect – premium feel */
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(15,118,110,0.18);
+}
+
+/* Image wrapper feel */
+.product-img {
+    width: 100%;
+    height: 160px;
+    object-fit: scale-down;
+   /* background: linear-gradient(180deg, #f0fdfa, #ffffff); */
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 18px;
+	
+}
+
+/* Product name */
+.product-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+/* Category */
+.category {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+/* Price – highlight */
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f766e;
+    margin-bottom: 6px;
+}
+
+/* Qty 
+.qty {
+    font-size: 13px;
+    color: #374151;
+    margin-bottom: 16px;
+}*/
+
+/* Add to cart button */
+.btn-buy {
+    width: 100%;
+    padding: 11px 0;
+    font-size: 14px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-buy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15,118,110,0.35);
+}
+
+/* =========================
+   ALL USERS – ADMIN TABLE
+========================= */
+
+/* Page wrapper */
+.list-container {
+    padding: 40px 70px 80px;
+}
+
+/* Page title (reuse same class) */
+.list-container .page-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #0f766e;
+}
+
+/* Table base */
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* Table header */
+.users-table thead {
+    background-color: #0f766e;
+}
+
+.users-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Table rows */
+.users-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Zebra rows */
+.users-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+/* Hover effect */
+.users-table tbody tr:hover {
+    background-color: #f0fdfa;
+}
+
+/* Action buttons */
+.btn-update,
+.btn-delete {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+/* Update button */
+.btn-update {
+    background-color: #e0f2f1;
+    color: #0f766e;
+}
+
+.btn-update:hover {
+    background-color: #0f766e;
+    color: #ffffff;
+}
+
+/* Delete button */
+.btn-delete {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.btn-delete:hover {
+    background-color: #b91c1c;
+    color: #ffffff;
+}
+
+
+/* =========================
+   ADD PRODUCT – FORM UI
+========================= */
+
+/* Page wrapper */
+.add-product-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px 100px;
+}
+
+/* Form container */
+.add-product-box {
+    width: 100%;
+    max-width: 480px;
+    background-color: #ffffff;
+    padding: 30px 34px;
+    border-radius: 18px;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.add-product-box h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #0f766e;
+}
+
+/* Label */
+.add-product-box label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+/* Inputs */
+.add-product-box input[type="text"],
+.add-product-box input[type="number"],
+.add-product-box input[type="file"] {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    margin-bottom: 18px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+/* Focus */
+.add-product-box input:focus {
+    border-color: #0f766e;
+}
+
+/* Submit button */
+.add-product-box button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.add-product-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15,118,110,0.35);
+}
+
+
+/* =========================
+   CONTACT PAGE – CLEAN UI
+========================= */
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 70px 20px 100px;
+}
+
+.contact-box {
+    width: 100%;
+    max-width: 460px;
+    background-color: #ffffff;
+    padding: 32px 36px;
+    border-radius: 18px;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.contact-box h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #0f766e;
+}
+
+/* Message text */
+.contact-box .msg {
+    text-align: center;
+    color: #0f766e;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+/* Labels */
+.contact-box label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+/* Inputs & textarea */
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    margin-bottom: 18px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+/* Focus */
+.contact-box input:focus,
+.contact-box textarea:focus {
+    border-color: #0f766e;
+}
+
+/* Button */
+.contact-box button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15,118,110,0.35);
+}
+
+/* =========================
+   VIEW PROFILE – REFINED UI
+========================= */
+
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px 120px;
+}
+
+/* Main card */
+.profile-box {
+    width: 100%;
+    max-width: 520px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 36px 40px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+/* Heading */
+.profile-box h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #0f766e;
+    margin-bottom: 35px;
+}
+
+/* Profile rows */
+.profile-box .row {
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+    font-size: 15px;
+    color: #374151;
+}
+
+/* Label */
+.profile-box .label {
+    width: 130px;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* Value */
+.profile-box .row span:last-child {
+    flex: 1;
+    color: #374151;
+}
+
+/* Divider line (soft) */
+.profile-box .row:not(:last-of-type) {
+    border-bottom: 1px dashed #e5e7eb;
+}
+
+/* Buttons section */
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 40px;
+}
+
+/* Button base */
+.btn {
+    flex: 1;
+    padding: 13px 0;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 14px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+/* Update button */
+.btn-update {
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: #ffffff;
+}
+
+.btn-update:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15,118,110,0.35);
+}
+
+/* Delete button */
+.btn-delete {
+    background-color: #ffffff;
+    color: #b91c1c;
+    border: 1.5px solid #fca5a5;
+}
+
+.btn-delete:hover {
+    background-color: #b91c1c;
+    color: #ffffff;
+}
+
+/* =========================
+   CART PAGE – CLEAN & NIT UI
+========================= */
+
+.cart-container {
+    max-width: 900px;
+    margin: 60px auto 100px;
+    padding: 0 20px;
+}
+
+/* Heading */
+.cart-container h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #0f766e;
+    margin-bottom: 30px;
+}
+
+/* Empty cart */
+.cart-container .empty {
+    text-align: center;
+    font-size: 16px;
+    color: #6b7280;
+    padding: 60px 0;
+}
+
+/* Table */
+.cart-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+}
+
+/* Table head */
+.cart-container th {
+    background-color: #0f766e;
+    color: #ffffff;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Table data */
+.cart-container td {
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Hover row */
+.cart-container tbody tr:hover {
+    background-color: #f0fdfa;
+}
+
+/* Total row */
+.total-row td {
+    background-color: #f9fafb;
+    font-size: 15px;
+}
+
+/* Remove button */
+.btn-remove {
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.btn-remove:hover {
+    background-color: #b91c1c;
+    color: #ffffff;
+}
+
+/* Buy now area */
+.buy-now-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+/* Buy button */
+.buy-now-container .btn-buy {
+    padding: 12px 36px;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.buy-now-container .btn-buy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15,118,110,0.35);
+}
+
+/* =========================
+   BILL / INVOICE PAGE
+========================= */
+
+.bill-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px 100px;
+}
+
+.bill-box {
+    width: 100%;
+    max-width: 700px;
+    background-color: #ffffff;
+    padding: 40px 45px;
+    border-radius: 16px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+}
+
+/* Invoice title */
+.bill-box h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f766e;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Top info */
+.bill-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #374151;
+}
+
+.bill-top p {
+    margin-bottom: 6px;
+}
+
+/* Table */
+.bill-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+/* Table header */
+.bill-box th {
+    background-color: #0f766e;
+    color: #ffffff;
+    padding: 12px 14px;
+    font-size: 14px;
+    text-align: left;
+}
+
+/* Table rows */
+.bill-box td {
+    padding: 12px 14px;
+    font-size: 14px;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Total row */
+.bill-box tr.total td {
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #f0fdfa;
+}
+
+/* Footer */
+.bill-footer {
+    text-align: center;
+}
+
+/* Print button */
+.bill-footer button {
+    padding: 12px 36px;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bill-footer button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15,118,110,0.35);
+}
+
+/* Print styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .bill-box, .bill-box * {
+        visibility: visible;
+    }
+
+    .bill-box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .bill-footer {
+        display: none;
+    }
+}
+
+
+/* =========================
+   HOME.JSP – CLEAN USER DASHBOARD
+========================= */
+
+.home-dashboard {
+    background: linear-gradient(135deg, #ecfeff, #ffffff);
+    padding: 110px 20px 130px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Card */
+.welcome-card {
+    background-color: #ffffff;
+    padding: 55px 65px;
+    border-radius: 28px;
+    max-width: 780px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 28px 60px rgba(15,118,110,0.18);
+}
+
+/* Login success badge */
+.login-success {
+    display: inline-block;
+    background-color: #dcfce7;
+    color: #166534;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+/* Heading */
+.welcome-card h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0f766e;
+    margin-bottom: 14px;
+}
+
+/* Username */
+.user-name {
+    color: #111827;
+}
+
+/* Text */
+.welcome-text {
+    font-size: 16px;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 42px;
+}
+
+/* Buttons */
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   BUTTON TEXT POLISH
+========================= */
+
+.btn {
+    display: inline-flex;              /* 🔥 IMPORTANT */
+    align-items: center;               /* vertical center */
+    justify-content: center;           /* horizontal center */
+    gap: 8px;                          /* emoji & text spacing */
+
+    padding: 14px 26px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;                    /* 🔥 text tight & clean */
+
+    border-radius: 28px;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: all 0.25s ease;
+}
+
+/* Primary */
+.btn-primary {
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(15,118,110,0.35);
+}
+
+/* Outline */
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #0f766e;
+    color: #0f766e;
+}
+
+.btn-outline:hover {
+    background-color: #0f766e;
+    color: #ffffff;
+}
+
+/* Danger */
+.btn-danger {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+
+.btn-danger:hover {
+    background-color: #b91c1c;
+    color: #ffffff;
+}
+
+/* =========================
+   INFO SECTION
+========================= */
+
+.home-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    padding: 90px 90px 120px;
+}
+
+.info-card {
+    text-align: center;
+    padding: 34px 30px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, #ffffff, #f0fdfa);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+.info-card .icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.info-card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0f766e;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: #374151;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .home-info {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 60px 40px;
+    }
+
+    .welcome-card {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-info {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-card h1 {
+        font-size: 28px;
+    }
+}
+
+/* =========================
+   LOGIN PAGE – NIT UI
+========================= */
+
+.login-container {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ecfeff, #ffffff);
+}
+
+/* Card */
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background-color: #ffffff;
+    padding: 40px 38px;
+    border-radius: 22px;
+    box-shadow: 0 25px 55px rgba(15,118,110,0.18);
+}
+
+/* Title */
+.login-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f766e;
+    margin-bottom: 24px;
+}
+
+/* Message */
+.login-msg {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.login-msg.success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.login-msg.error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #0f766e;
+}
+
+/* Login button */
+.login-btn-form {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Note */
+.login-note {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 22px;
+    color: #374151;
+}
+
+.login-note a {
+    color: #0f766e;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-note a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   REGISTER PAGE – NIT UI
+========================= */
+
+.register-container {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #ecfeff, #ffffff);
+}
+
+/* Card */
+.register-card {
+    width: 100%;
+    max-width: 440px;
+    background-color: #ffffff;
+    padding: 42px 40px;
+    border-radius: 24px;
+    box-shadow: 0 25px 55px rgba(15,118,110,0.18);
+}
+
+/* Title */
+.register-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f766e;
+    margin-bottom: 28px;
+}
+
+/* Button */
+.register-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Note */
+.register-note {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 22px;
+    color: #374151;
+}
+
+.register-note a {
+    color: #0f766e;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-note a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   UPDATE PROFILE – NIT UI
+========================= */
+
+.update-container {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #ecfeff, #ffffff);
+}
+
+/* Card */
+.update-card {
+    width: 100%;
+    max-width: 460px;
+    background-color: #ffffff;
+    padding: 44px 42px;
+    border-radius: 26px;
+    box-shadow: 0 28px 60px rgba(15,118,110,0.18);
+}
+
+/* Title */
+.update-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f766e;
+    margin-bottom: 28px;
+}
+
+/* Button group */
+.update-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.update-actions .btn {
+    flex: 1;
+}
+
+
+
